@@ -46,3 +46,25 @@ vim.o.sidescrolloff = 8 -- Keep n lines left and right from the cursor
 vim.o.confirm = true -- If performing an operation that would fail due to unsaved changes in the buffer (like `:q`), instead raise a dialog asking if you wish to save the current file(s)
 vim.o.signcolumn = "yes" -- Reserve space for a column on the left (stops the diagnostic icons changing line number padding)
 vim.o.updatetime = 250 -- Time (in ms) before the cursor is considered idle
+
+-- Diagnostics
+vim.diagnostic.config({
+    severity_sort = true,
+    float = {
+        border = "rounded",
+        source = true,
+        header = "",
+    },
+    update_in_insert = true,
+    underline = {
+        severity = vim.diagnostic.severity.ERROR,
+    },
+    signs = {
+        text = {
+            [vim.diagnostic.severity.ERROR] = "󰅚 ",
+            [vim.diagnostic.severity.WARN] = "󰀪 ",
+            [vim.diagnostic.severity.INFO] = "󰋽 ",
+            [vim.diagnostic.severity.HINT] = "󰌶 ",
+        },
+    },
+})

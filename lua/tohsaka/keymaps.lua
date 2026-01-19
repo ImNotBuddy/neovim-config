@@ -46,3 +46,11 @@ vim.keymap.set("n", "<leader>qq", "<cmd>qall<cr>", opts)
 
 -- Open Lazy
 vim.keymap.set("n", "<leader>l", "<cmd> Lazy <cr>", opts)
+
+-- Remove the default LSP keybinds
+vim.keymap.del("n", "grr")
+vim.keymap.del("n", "grt")
+vim.keymap.del("n", "gri")
+vim.keymap.del("n", "grn")
+vim.keymap.del("n", "gra")
+vim.keymap.del("x", "gra")

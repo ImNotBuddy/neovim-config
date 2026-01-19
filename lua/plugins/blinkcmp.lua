@@ -54,7 +54,7 @@ return {
         },
     },
 
-    -- Configures LuaLS for edding neovim files
+    -- Configures LuaLS for editing neovim files
     {
         "folke/lazydev.nvim",
         ft = "lua",
