@@ -15,9 +15,13 @@ vim.keymap.set({ "n", "v" }, "<leader>d", '"_d')
 -- Save file, silently
 vim.keymap.set({ "i", "x", "n", "s" }, "<C-s>", "<cmd>silent w<cr><esc>", opts)
 
--- Better indenting
-vim.keymap.set("x", "<", "<gv", opts)
-vim.keymap.set("x", ">", ">gv", opts)
+-- Indent line
+vim.keymap.set("n", "<Tab>", ">>", opts)
+vim.keymap.set("n", "<S-Tab>", "<<", opts)
+
+-- Indent selection
+vim.keymap.set("x", "<Tab>", ">gv", opts)
+vim.keymap.set("x", "<S-Tab>", "<gv", opts)
 
 -- Move between buffers with just <control> + direction
 vim.keymap.set("n", "<C-h>", "<C-w><C-h>", opts)

@@ -6,6 +6,16 @@ return {
     },
 
     {
+        "nvim-mini/mini.comment",
+        event = "VeryLazy",
+        opts = {
+            options = {
+                ignore_blank_line = true
+            }
+        }
+    },
+
+    {
         "nvim-mini/mini.pick",
         lazy = false,
         keys = {
