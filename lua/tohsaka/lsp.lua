@@ -1,5 +1,6 @@
 local lsp_servers = {
     "lua_ls",
+    "clangd"
 }
 
 -- Enable lsp completion

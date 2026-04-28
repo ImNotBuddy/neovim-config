@@ -21,6 +21,7 @@ return {
         keys = {
             { "<leader>sh", "<cmd>Pick help<cr>", { noremap = true, silent = true } },
             { "<leader>sf", "<cmd>Pick files<cr>", { noremap = true, silent = true } },
+            { "<leader>sn", "<cmd>Pick files source=vim.fn.stdpath('config')<cr>", { noremap = true, silent = true } },
             { "<leader>sg", "<cmd>Pick grep_live<cr>", { noremap = true, silent = true } },
 
         },

@@ -9,6 +9,7 @@ return {
                 "bash",
                 "lua",
                 "vimdoc",
+                "cpp"
             },
         },
         config = function(_, opts)
