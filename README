@@ -1,1 +1,4 @@
 New config I have set up on Linux
+
+Note: I install lsp servers manually and not through a tool like Mason. I get the configs manually from the lspconfig GitHub repo as well and add them to the lsp folder.
+BasedPyright is only available on the AUR so I install it as a dependency per project with pip.

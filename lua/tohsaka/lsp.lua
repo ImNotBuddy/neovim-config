@@ -1,6 +1,8 @@
 local lsp_servers = {
     "lua_ls",
-    "clangd"
+    "clangd",
+    -- "rust-analyzer", -- Set up with rustaceanvim and no vim.lsp.enable
+    "basedpyright",
 }
 
 -- Enable lsp completion

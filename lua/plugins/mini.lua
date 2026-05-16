@@ -21,7 +21,6 @@ return {
         keys = {
             { "<leader>sh", "<cmd>Pick help<cr>", { noremap = true, silent = true } },
             { "<leader>sf", "<cmd>Pick files<cr>", { noremap = true, silent = true } },
-            { "<leader>sn", "<cmd>Pick files source=vim.fn.stdpath('config')<cr>", { noremap = true, silent = true } },
             { "<leader>sg", "<cmd>Pick grep_live<cr>", { noremap = true, silent = true } },
 
         },
@@ -33,12 +32,12 @@ return {
             vim.keymap.set("n", "<leader>sw", function()
                 local word = vim.fn.expand("<cword>")
                 MiniPick.builtin.grep({ pattern = word })
-            end)
+            end, { noremap = true, silent = true } )
 
             -- Search Neovim config files
             vim.keymap.set("n", "<leader>sn", function()
-                MiniPick.builtin.files({ source = { cwd = vim.fn.stdpath("config") } })
-            end)
+                MiniPick.builtin.files({}, { source = { cwd = vim.fn.stdpath("config") } })
+            end, { noremap = true, silent = true } )
         end
     },
 }

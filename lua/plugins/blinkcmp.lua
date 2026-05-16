@@ -7,7 +7,6 @@ return {
     opts = {
         keymap = { preset = "enter" },
 
-        -- Add lazydev for better autocomplete in neovim config files
         sources = {
             default = { "lsp", "path", "snippets", "buffer" },
         },
