@@ -33,6 +33,7 @@ return {
 			lua = { "stylua" },
             cpp = { "clang_format" },
 			rust = { "rustfmt", lsp_format = "fallback" },
+            tex = { "latexindent" }
 		},
 	},
 }

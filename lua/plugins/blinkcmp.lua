@@ -5,7 +5,7 @@ return {
         "rafamadriz/friendly-snippets",
     },
     opts = {
-        keymap = { preset = "enter" },
+        -- keymap = { preset = "enter" },
 
         sources = {
             default = { "lsp", "path", "snippets", "buffer" },
@@ -19,9 +19,9 @@ return {
                 draw = {
                     treesitter = { "lsp" },
                     columns = {
-                        { 'kind_icon' },
-                        { 'label', 'label_description', gap = 1 },
-                        { 'kind' },
+                        { "kind_icon" },
+                        { "label", "label_description", gap = 1 },
+                        { "kind" },
                     },
                 },
             },
@@ -33,6 +33,7 @@ return {
                 },
             },
         },
+
         signature = {
             enabled = true,
             window = { border = "rounded" },
@@ -47,7 +48,7 @@ return {
             completion = {
                 list = { selection = { preselect = false } },
                 menu = {
-                    auto_show = function(ctx, _)
+                    auto_show = function(ctx)
                         return vim.fn.getcmdtype() == ":"
                     end,
                 },

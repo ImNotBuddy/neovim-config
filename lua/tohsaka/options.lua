@@ -10,8 +10,9 @@ vim.o.linebreak = true -- Requires wrap to be true. Don't split words when wrapp
 -- Searching
 vim.o.ignorecase = true -- Case-insensitive searching
 vim.o.smartcase = true -- Override ignorecase when search has capitals
-vim.o.hlsearch = false -- Should the search result be highlighted
+vim.o.hlsearch = true -- Should the search result be highlighted
 vim.o.incsearch = true -- Match as typing
+vim.o.inccommand = "split" -- Previews what a replacement will look like
 
 -- Indentation
 vim.o.autoindent = true -- Automatically copy indent from current line when starting a new one
@@ -19,7 +20,6 @@ vim.o.shiftwidth = 4 -- Spaces added for indentation
 vim.o.tabstop = 4 -- Display the tab character, \t, as n spaces
 vim.o.softtabstop = 4 -- Insert n spaces for a tab
 vim.o.expandtab = true -- Use spaces and not the tab character
-vim.o.hlsearch = false -- Should the search result be highlighted
 
 -- Files
 vim.o.swapfile = false -- Swap file in case of a crash
@@ -29,12 +29,16 @@ vim.o.undolevels = 10000 -- How much to save
 -- Command line and status line
 vim.o.cmdheight = 0 -- Commandline height
 vim.o.showmode = false -- Show the current mode
---vim.o.laststatus = 3 -- How the status line should behave, 3 means the bar is global for all splits
+vim.o.laststatus = 3 -- How the status line should behave, 3 means the bar is global for all splits
 
 -- Folding
 vim.o.foldlevel = 99 -- Fold level, set to 99 to open them by default
 vim.o.foldmethod = "indent" -- How folding should happen- overriden in treesitter.lua
 vim.o.foldtext = "getline(v:foldstart) . '...'" -- What the foldtext looks like
+
+-- Make opening help pages split below or to the right not above
+vim.o.splitbelow = true
+vim.o.splitright = true
 
 -- Misc
 vim.o.mouse = "a" -- Enable mouse mode

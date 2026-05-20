@@ -15,6 +15,12 @@ vim.keymap.set({ "n", "v" }, "<leader>d", '"_d')
 -- Save file, silently
 vim.keymap.set({ "i", "x", "n", "s" }, "<C-s>", "<cmd>silent w<cr><esc>", opts)
 
+-- Create undo points after punctuation
+vim.keymap.set("i", ",", ",<C-g>U", opts)
+vim.keymap.set("i", ".", ".<C-g>U", opts)
+vim.keymap.set("i", "!", "!<C-g>U", opts)
+vim.keymap.set("i", "?", "?<C-g>U", opts)
+
 -- Indent line
 vim.keymap.set("n", "<Tab>", ">>", opts)
 vim.keymap.set("n", "<S-Tab>", "<<", opts)
@@ -22,6 +28,9 @@ vim.keymap.set("n", "<S-Tab>", "<<", opts)
 -- Indent selection
 vim.keymap.set("x", "<Tab>", ">gv", opts)
 vim.keymap.set("x", "<S-Tab>", "<gv", opts)
+
+-- Clear search highlighting
+vim.keymap.set("n", "<C-c>", ":nohl <CR>", opts)
 
 -- Move between buffers with just <control> + direction
 vim.keymap.set("n", "<C-h>", "<C-w><C-h>", opts)
